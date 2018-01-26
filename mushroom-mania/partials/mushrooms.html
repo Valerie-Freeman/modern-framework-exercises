@@ -4,7 +4,7 @@
 <input type="radio" name="mushroom" ng-model="edible" ng-value="true"> Non-Poisonous
 
 <ul>
-    <li ng-repeat="shroom in mushrooms | filter: shroomDes | filter: edible">
+    <li ng-repeat="shroom in mushrooms | filter: {description: shroomDes} | filter: {edible: edible}">
         <h4>{{shroom.name}}</h4>
         <p>{{shroom.description}}</p>
     </li>
